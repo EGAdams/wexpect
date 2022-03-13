@@ -16,7 +16,13 @@ print(child.before, end='')
 print(child.after, end='')
 
 # run list directory command
-child.sendline('ls')
+child.sendline('dir')
+
+# Waiting for prompt
+child.expect('>')
+
+# run list directory command
+child.sendline('dir')
 
 # Waiting for prompt
 child.expect('>')
